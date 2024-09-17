@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de reservas para el restaurante Palo Beach">
+    <title>Reservas - Palo Beach</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\miApp\style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Palo Beach</h1>
+        <nav>
+            <ul>
+                <li><a href="#reserva">Reservar</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de reserva -->
+    <section id="reserva">
+        <h2>Reserva tu mesa</h2>
+        <form id="reservation-form" action="C:\xampp\htdocs\miApp\send-emal.php" method="POST">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" max="10" required>
+
+            <label for="ubicacion">Ubicación:</label>
+            <select id="ubicacion" name="ubicacion" required>
+                <option value="paraguas">Paraguas</option>
+                <option value="terraza">Terraza</option>
+                <option value="salon">Salón</option>
+            </select>
+
+            <button type="submit">Reservar</button>
+        </form>
+    </section>
+
+    <!-- Sección de galería de fotos -->
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="gallery">
+            <img src="C:\xampp\htdocs\miApp\f5a18c87-3ac2-43c6-8c3e-2db77dfdef99.jpg" alt="Chillo Frito">
+            <img src="C:\xampp\htdocs\miApp\P1.jpg" alt="Mojito de fresa">
+            <img src="C:\xampp\htdocs\miApp\P2.jpg" alt="Croqueta">
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>Contacto: negotiumrevolution@gmail.com | Teléfono y WhatsApp: 809-526-3254 </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
